@@ -1,10 +1,6 @@
 import React, {memo, useMemo, useState} from 'react';
-import {View, Text, SafeAreaView, FlatList, Image} from 'react-native';
+import {View, Text, SafeAreaView, FlatList, Image,TouchableOpacity} from 'react-native';
 import {globalStyle} from '../styles/index';
-import {
-  TouchableWithoutFeedback,
-  TouchableOpacity,
-} from 'react-native-gesture-handler';
 import PropTypes from 'prop-types';
 import MaterialCommunity from 'react-native-vector-icons/MaterialCommunityIcons'; //limit icon and improve performance
 
@@ -18,7 +14,7 @@ const {
   dateText,
 } = globalStyle; //destructuring technic for not make a reference on object
 
-const HorizontalArticle = ({navigation, data}) => {
+const HorizontalArticle = ({navigation, data,indexContent}) => {
   const [array, setArray] = useState([]);
   const handleLike = (index) => {
     if (array.includes(index)) {
@@ -31,8 +27,18 @@ const HorizontalArticle = ({navigation, data}) => {
   };
 
   const newData = useMemo(() => {
-    return data
+    if(indexContent){
+      let filteredData = data.filter(function (e) {
+        return e.id !== indexContent;
+    });
+return filteredData
+    }else{
+      return data;
+    }
+    
   }, [newData]); //use memo to memoization and avoid multiple renders cause of parent
+
+
   return (
     <SafeAreaView style={container}>
       <FlatList
@@ -46,7 +52,7 @@ const HorizontalArticle = ({navigation, data}) => {
             <View style={cardContent}>
               <View style={cardContainerPerCard}>
                 <View>
-                  <TouchableWithoutFeedback
+                  <TouchableOpacity
                     onPress={() =>
                       navigation.navigate('Detail', {
                         item: item,
@@ -57,16 +63,22 @@ const HorizontalArticle = ({navigation, data}) => {
                       style={slidePicture}
                       resizeMode="cover"
                     />
-                  </TouchableWithoutFeedback>
+                  </TouchableOpacity>
 
-                  <View style={footerCard}>
+                  <TouchableOpacity
+                    style={footerCard}
+                    onPress={() =>
+                      navigation.navigate('Detail', {
+                        item: item,
+                      })
+                    }>
                     <Text style={dateText}>
                       {item.date} ⬤ <Text>{item.hours}</Text>
                     </Text>
                     <Text style={titleText} numberOfLines={2}>
                       {item.title}
                     </Text>
-                  </View>
+                  </TouchableOpacity>
                   <TouchableOpacity onPress={() => handleLike(index)}>
                     <MaterialCommunity
                       name="heart-circle"
@@ -86,5 +98,6 @@ const HorizontalArticle = ({navigation, data}) => {
 HorizontalArticle.propTypes = {
   navigation: PropTypes.shape({}),
   data: PropTypes.array,
+  indexContent:PropTypes.number
 };
 export default memo(HorizontalArticle);

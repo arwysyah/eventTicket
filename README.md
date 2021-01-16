@@ -38,6 +38,7 @@
 
 ```javascript
 Aplikasi ini tidak menggunakan online,offline database ataupun storage lainnya. data yang digunakan statis dan hanya ada manipulasi di UI dan animasi yang digunakan.
+Android only
 ```
  Copyright © 2020 Arwy Syahputra Siregar a.k.a kenzo
 

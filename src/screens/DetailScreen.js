@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {
   SafeAreaView,
   View,
@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Alert,
+  ActivityIndicator,
 } from 'react-native';
 import {width, globalStyle, HEIGHT, height} from '../styles';
 import PropTypes from 'prop-types';
@@ -31,7 +32,8 @@ const Detail = ({navigation, route}) => {
     smallWrapper,
     titleText,
     avatarImage,
-    contentPart
+    contentPart,
+    container
   } = globalStyle;
   const {
     title,
@@ -43,15 +45,30 @@ const Detail = ({navigation, route}) => {
     location,
     detail,
     price,
+    id
   } = item;
 
   const [heightText, setHightText] = useState(false);
   const NUM_OF_LINES = 2;
   const [textHide, setHideText] = useState(true);
   const [follow, setFollow] = useState(false);
+  const [showLoading, setShowLoading] = useState(false)
+  useEffect(
+    () => {
+      let timer1 = setTimeout(() => setShowLoading(null), 1000)
+
+      // this will clear Timeout
+      return () => {
+        clearTimeout(timer1)
+      }
+    },
+    [] //useEffect will run only one time
+       //if you pass a value to array, like this [data] than clearTimeout will run every time this value changes
+  )
+
   const onTextLayout = (e) => {
     setHightText(e.nativeEvent.lines.length > NUM_OF_LINES);
-  };
+  };//this is using arrow function because the function not invoked when press button
   function handleView() {
     // The arrow function returns a new function every time. This causes React to think something has changed in our view, when in fact nothing has.
     setHideText(!textHide);
@@ -78,7 +95,6 @@ const Detail = ({navigation, route}) => {
         style={{
           justifyContent: 'center',
           alignItems: 'center',
-          // top: width / 4,
         }}>
         <View>
           <Text style={bigText}>About</Text>
@@ -114,6 +130,9 @@ const Detail = ({navigation, route}) => {
   const data = ['About', 'Author'];
   return (
     <SafeAreaView>
+      {showLoading === false? 
+      <View style={container}><ActivityIndicator size='large' color='red' style={{top:height/2}}/>
+      </View>:
       <ScrollView showsVerticalScrollIndicator={false}>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
@@ -179,14 +198,16 @@ const Detail = ({navigation, route}) => {
         <Text style={{color: 'black', paddingLeft: 15, fontSize: 18}}>
           More Like This
         </Text>
-        <HorizontalArticles data={newData} navigation={navigation} />
+        <HorizontalArticles data={newData} navigation={navigation} indexContent ={id}/>
         <View style={{height: 60}} />
       </ScrollView>
+}
       <TouchableOpacity
         style={floatingButton}
         onPress={() => Alert.alert('Next')}>
         <Text style={nextButton}>Next</Text>
       </TouchableOpacity>
+     
     </SafeAreaView>
   );
 };
