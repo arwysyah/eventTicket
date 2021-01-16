@@ -55,7 +55,7 @@ const Detail = ({navigation, route}) => {
   const [showLoading, setShowLoading] = useState(false)
   useEffect(
     () => {
-      let timer1 = setTimeout(() => setShowLoading(null), 1000)
+      let timer1 = setTimeout(() => setShowLoading(null), 300)
 
       // this will clear Timeout
       return () => {

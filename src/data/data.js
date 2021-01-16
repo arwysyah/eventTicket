@@ -71,7 +71,7 @@ const newData = [
     image:
       'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F105498170%2F271045362638%2F1%2Foriginal.20191126-085802?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C181%2C1280%2C640&s=ed8a20bd8720cb2146f7b0c46d1cf2b1',
     location: 'Jakarta',
-    author: 'Uknown',
+    author: 'Jakarta Motivator Toastmaster',
     date: 'Sab, Jan 17',
     hours: '02.00 WIB',
     duration:'Tiga Jam',
@@ -140,6 +140,7 @@ const newData = [
       'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F122259169%2F77857482883%2F1%2Foriginal.20210105-130322?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C4000%2C2000&s=72b9bdf8896be5cab76fd8298825d6a7',
     location: 'Jakarta',
     date: 'Kamis, Jan 21',
+    author:'Leadership Performance Group',
     hours: ' 10.00 WIB',
     title: 'Turn Your Talents into Strengths',
     status: 'Online event',

@@ -37,6 +37,7 @@
 # Note
 
 ```javascript
+Javascript Style yang digunakan (AirBnb Style)
 Aplikasi ini tidak menggunakan online,offline database ataupun storage lainnya. data yang digunakan statis dan hanya ada manipulasi di UI dan animasi yang digunakan.
 Android only
 ```
