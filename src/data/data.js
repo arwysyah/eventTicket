@@ -7,8 +7,11 @@ const newData = [
     location: 'Jakarta',
     date: 'Sab, Jan 17',
     hours: '02.00 WIB',
+    status: 'Online event',
     title: 'Webinar 3 Rahasia untuk Sukses Berbisnis Lewat Internet',
     like: 5,
+    price:'Free    ',
+    duration:'Dua Jam',
     detail: `Jack Ma - Pendiri Alibaba - Salah satu orang Terpenting di industri eCommerce mengatakan: Era Ayahnya dapat informasi dari Radio
       {'\n'}Era Dirinya dapat informasi dari Televisi
       
@@ -61,7 +64,7 @@ const newData = [
       NOTE :
       
       jika Anda sudah Berhasil mendaftar maka Anda akan mendapatkan Email dari D2 LIVE WEBINAR yg isinya berupa Link Akses Webinar untuk masuk ke Webinar pada hari Sabtu ini jam 10.00 WIB. Harap Hadir via online 10 menit lbh awal . 🙏`,
-    status: 'free',
+    status: 'Online event',
   },
   {
     id: 2,
@@ -71,12 +74,10 @@ const newData = [
     author: 'Uknown',
     date: 'Sab, Jan 17',
     hours: '02.00 WIB',
+    duration:'Tiga Jam',
     title: 'Public Speaking, Online Meeting Jakarta Motivator Toastmaster',
     like: 9,
-    detail: `Improve Your Public Speaking Skill with us! We are a productive club in sharing positive spirit in the field of public speaking.
-      About this Event
-      An International Open English Public Speaking and Leadership Club
-      
+    detail: `
       Jakarta Motivator Toastmaster is one of the clubs in Toastmasters International, usually called MOTZ. MOTZ establish since 2000 and currently, we have more than 20 active members. MOTZ is a club that always gets President's Distinguished Club predicate from Toastmasters International since the club was first established.
       
       MOTZ is a productive club in sharing positive spirit in the field of public speaking. We held our weekly meeting every Wednesday from 7pm - 9pm.
@@ -90,7 +91,7 @@ const newData = [
       RSVP: +62 8561 973 262
       
       Instagram @jakartamotivators`,
-    status: 'free',
+    status: 'Online event',
   },
   {
     id: 3,
@@ -101,7 +102,9 @@ const newData = [
     date: 'Rab, Jan 19',
     hours: '02.00 WIB',
     like: 12,
+    price:'Free    ',
     title: 'Jakarta: Not Sure When, But Then! with Matt Davis',
+    duration:'Empat Jam',
     detail: `Not Sure When, But Then!
       The world may be on pause and travel an impossibility, but we’re looking forward to seeing friends across the globe once we know it’s safe for everyone to get together again.
       
@@ -129,7 +132,7 @@ const newData = [
       Stand up meets storytelling in a show written around the world, as Matt Davis stitches a personal narrative underneath ideas developed while performing in over 250 cities across more than 50 countries.
       
       Matt masterfully jokes about language, nationality, & global/regional customs; as well as his and our perceptions of them. Throughout, the show aims a focused message: that we dismiss the equation ‘familiar equals good.’`,
-    status: 'free',
+    status: 'Online event',
   },
   {
     id: 4,
@@ -139,8 +142,10 @@ const newData = [
     date: 'Kamis, Jan 21',
     hours: ' 10.00 WIB',
     title: 'Turn Your Talents into Strengths',
-    status: 'free',
+    status: 'Online event',
     like: 16,
+    price:'Free    ',
+    duration:'Dua Jam',
     detail: `Synopsis of this Online Training Session
       This session will be conducted in English.
       
@@ -168,8 +173,10 @@ const newData = [
     hours: '12.00 WIB',
     title:
       'Tahun Baru, Kerja Baru : Pembuatan CV dan Trik Lolos Interview di 2021',
-    status: 'Rp 90.000',
+    status: 'Online event',
+    price:'90.000',
     like: 3,
+    duration:'Lima Jam',
     detail: `Siapa yang punya resolusi tahun 2021 dapat pekerjaan baru? Pasti banyak, ya. Tapi sayangnya, di masa pandemi seperti ini mencari pekerjaan baru bukan hal yang mudah loh. Lebih baik siapin bekalnya dulu yuk!
 
       GreatEdu punya kelas pembuatan CV biar profil profesionalmu bisa dilirik HRD perusahaan impian. Kamu juga bisa dapetin trik lolos interview, terutama di masa pandemi seperti sekarang. Mentoring bareng pakarnya bisa kasih kamu insight baru menuju pekerjaan impianmu.
@@ -215,8 +222,10 @@ const newData = [
     hours: '02.00 WIB',
     title:
       'How to Accelerate Your Sales Career in Local & Multinational Company',
-    status: 'free',
+    status: 'Online event',
     like: 12,
+    price:'Free    ',
+    duration:'Tiga Jam',
     detail: `Sales merupakan ujung tombak sebuah bisnis. Tanpa adanya sales, perusahaan tidak bisa meningkatkan pendapatan dan mengembangkan bisnisnya. Maka berkarir menjadi seorang sales merupakan salah satu profesi yang menjanjikan sekaligus menantang.
       
       Ingin tahu seperti apa seluk beluk profesi sales yang sesungguhnya? Lalu bagaimana bedanya peran Sales di perusahaan lokal dan multinasional? Kamu yang ingin atau sedang berkarir di bidang sales wajib banget ikut kelas ini. Akan dikupas secara lengkap cara menampilkan kinerja terbaik sebagai sales di masing-masing perusahaan lokal atau multinasional.
@@ -267,8 +276,10 @@ const newData = [
     hours: '02.00 WIB',
     title:
       '3 SKILL DAN 3 RAHASIA MENCAPAI KESUKSESAN DALAM BERBISNIS DI INTERNET',
-    status: 'free',
+    status: 'Online event',
     like: 4,
+    price:'Free    ',
+    duration:'Tiga Jam',
     detail: `Dalam Seminar ini Anda akan pelajari :
 
       - Sistem Sederhana yang bisa membuat Anda bisa langsung ikut TERJUN ke bisnis internet yang sudah terbukti menciptakan banyak Internet Millionaire baru (Tidak perlu pengalaman apapun, yang penting adalah Anda MAU DIARAHKAN, dan bisa Copy + Paste, karena Anda akan DIBIMBING STEP BY STEP)
@@ -292,8 +303,10 @@ const newData = [
     date: 'Sat, Jan 16',
     hours: '10.00 WIB',
     title: 'SUCCESS BREAKTHROUGH 2021',
-    status: 'free',
+    status: 'Online event',
     like: 16,
+    duration:'Enam Jam',
+    price:'Free    ',
     detail: `Banyak sekali orang yang Menyalahkan Nasib, lingkungan, pemerintah, bahkan dirinya sendiri, karena tidak bisa mengalami sukses seperti orang lain yang dilihatnya.
 
       Setelah melihat kisah sukses Levi Strauss, ternyata masalahnya justru ada di dalam diri kita sendiri. Yaitu Mental Blok berupa Suka Menyalahkan. Mental blok nilah yang harus kita buang jauh, agar kitapun bisa bersyukur dan Berpikir Positif.
@@ -346,7 +359,7 @@ const newData = [
       Webinar Internet BOOST
       Catatan :
       
-      Selain Tiket Seminar Gratis tsb, bagi Anda yang mendaftar dan hadir, Anda juga akan mendapatkan dua e-book gratis yang sangat berharga, dari 2 penulis top dunia, yaitu : Marketing Jenius - Jay Abraham dan Pionir Bisnis Internet Berpengaruh - Seth Godin, senilai total US$ 300. 100% FREE.
+      Selain Tiket Seminar Gratis tsb, bagi Anda yang mendaftar dan hadir, Anda juga akan mendapatkan dua e-book gratis yang sangat berharga, dari 2 penulis top dunia, yaitu : Marketing Jenius - Jay Abraham dan Pionir Bisnis Internet Berpengaruh - Seth Godin, senilai total US$ 300. 100% Online event.
       
       `,
   },
@@ -359,8 +372,10 @@ const newData = [
     date: 'Sab, Feb 6',
     hours: '10.00 WIB',
     title: 'UX Research: Understanding Research Methods',
-    status: 'free',
+    status: 'Online event',
     like: 11,
+    duration:'Empat Jam',
+    price:'Free    ',
     detail: `Kemajuan teknologi mendorong banyak perusahaan membuat produk digital yang bisa mempermudah aktivitas publik. Di balik pembuatan produk digital tersebut, ternyata ada peran UX Research yang bertugas mengkaji kebutuhan pengguna.
 
       Riset ini bertujuan agar produk digital yang diciptakan benar-benar sesuai dengan apa yang dibutuhkan pengguna. Jangan sampai udah effort membuat aplikasi, ternyata gak ada penggunanya karena gak sesuai sama kebutuhan user akibat kurangnya riset.
@@ -399,8 +414,10 @@ const newData = [
     date: 'Jum, Feb 12',
     hours: '09.00 WIB',
     title: 'Dazzling Shoot Food Photography : Make Your Dish Looks Yummy!',
-    status: 'free',
+    status: 'Online event',
     like: 17,
+    duration:'Dua Jam',
+    price:'Free    ',
     detail: `Sudah jadi rahasia umum, jualan makanan via online wajib didukung foto produk yang bisa menggugah selera. Karena calon pembeli gak bisa icip-icip tester makanannya, maka foto harus bisa menceritakan bagaimana lezatnya rasa makanan yang kamu jual.
 
       That's why, kamu yang punya bisnis kuliner atau punya hobi bikin konten kulineran wajib banget menguasai skill yang satu ini. Yaps, Food Photography! Di kelas ini, kamu akan diajak mempelajari cara membuat foto yang dapat bercerita, cara styling yang aesthetic, hingga proses editing dengan komposisi yang sempurna.
@@ -479,6 +496,9 @@ const newData = [
     hours: '02.00 WIB',
     title: 'Bright Mood Food Photography',
     like: 14,
+    price:'Free    ',
+    status:'Online event',
+    duration:'Dua Jam',
     detail: `Sebagai pembuat konten atau pemilik bisnis kuliner, foto sebuah makanan yang diunggah harus punya nilai estetik yang dapat menggugah selera audiens, kan? Makanya penting banget untuk punya skill food photography untuk mendukung hobi dan bisnismu.
 
       Di kelas ini, kamu akan mempelajari teknik food photography bertema Bright Mood mulai dari setting camera, set scene, menentukan spot pencahayaan, composition rules, hingga proses editing. Kelas dilaksanakan selama 2 hari via WhatsApp Group dan Live Zoom. Kamu bisa diskusi interaktif secara mendalam langsung dengan coach Astrid Febrina Rizal.
@@ -554,7 +574,9 @@ const newData = [
     date: 'Kam, Jun 23',
     hours: '14.00 WIB',
     title: 'Gas Indonesia Summit & Exhibition 2021',
-    status: 'free',
+    status: 'Online event',
+    price:'Free    ',
+    duration:'Empat Jam',
     detail: `Creating an attractive investment environment for future E&P activity and gas to power projects as well as strategies for driving gas demand incountry and infrastructure integration will all be addressed at the next edition of Gas Indonesia Summit, among other important topics.
 
       Once again, we are delighted to have the full active support of Ministry of Energy & Mineral Resources (ESDM), SKK Migas - Special Task Force for Upstream Oil and Gas Activities, and is hosted by PGN - PT Perusahaan Gas Negara (Persero) Tbk and PLN - Perusahaan Listrik Negara PT Persero, highlighting once again the importance of this event to Indonesia’s gas sector leaders.
@@ -572,7 +594,8 @@ const newData = [
     date: 'Rab Apr 21',
     hours: '13.00 WIB',
     title: 'Indo Safety Security & Fire Protection Expo (ISSF EXPO 2021)',
-    status: 'free',
+    status: 'Online event',
+    duration:'Satu Jam',
     detail: `Indonesia International Safety, Security & Fire Protection Exhibition & Seminar.
       About this Event
       The event will offer a platform to security professionals to share knowledge and to network by tapping into the growing Indonesian market. The summit enables you to establish relationships with key decision makers, giving them the opportunity to experience the latest innovations in the security industry.
@@ -622,6 +645,7 @@ const newData = [
       Cikarang Industrial Expo (CIE)
       
       Indo Cleantech Expo (ICE)`,
+      price:'Free'
   },
   {
     id: 14,
@@ -632,19 +656,21 @@ const newData = [
     date: 'Kam, 22 Apr',
     hours: '10.00 WIB',
     title: 'The 6th Cikarang Industrial Expo (CIE 2021)',
-    status: 'free',
+    status: 'Online event',
     like: 3,
+    duration:'Satu Jam',
+    price:'Free    ',
     detail: `The Indonesia International Industry, Machinery & Technology Exhibition & Seminar which is support by various industrial sectors in Cikarang
       About this Event
       The 6th Cikarang Industrial Expo 2021 attracts professionals from all aspects of the industry in Cikarang, Bekasi (West Java), Indonesia. Plant & Factory Engineering, Production, Maintenance, R & D & Project Engineering, QA / QC & Lab, Safety, Environmental, Facility Management, Purchasing, Contractors, Developers, Educators, Engineers, Facility Managers, Financial Service Providers, Government agencies and other engineering-related departments will all be at the conference to share ideas and promote updates on technologies being applied to the industries.
-      
+      www.google.com ssasdsd
       Fair Description
       
       An event with Workshops, Seminars, Technological Demo, Displays, Business Matching, Business Networking. Showcasing the latest in Manufacturing Equipment, Material Supplies & Service, Industrial Automation & Logistics, Mechanical Engineering & Electrical, Laboratory Testing & Environmental, Machine Tools & Measuring, Water & Waste Management, Construction, Energy & Power, Safety & Security.
       
       Admission
       
-      Free Admission to trade buyers and professional visitors only.
+      Online event Admission to trade buyers and professional visitors only.
       
       Persons under 18 will not be admitted.
       
@@ -665,7 +691,7 @@ const newData = [
       
       Visitor Registration
       
-      (FREE ADMISSION)
+      (Online event ADMISSION)
       
       to become a participant, you can click To Exhibit
       

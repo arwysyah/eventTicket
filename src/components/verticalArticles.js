@@ -7,7 +7,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import {globalStyle,width} from '../styles/index';
+import {globalStyle, width} from '../styles/index';
 import PropTypes from 'prop-types';
 const {
   smallImage,
@@ -20,9 +20,8 @@ const {
 } = globalStyle;
 
 const VerticalArticles = ({navigation, data}) => {
-
   const newData = useMemo(() => {
-    return data
+    return data;
   }, [data]);
   return (
     <SafeAreaView style={container}>
@@ -40,9 +39,11 @@ const VerticalArticles = ({navigation, data}) => {
             <View style={cardContainer}>
               <TouchableOpacity
                 style={directionRows}
-                onPress={() => navigation.navigate('Detail',{
-                    item:item
-                })}>
+                onPress={() =>
+                  navigation.navigate('Detail', {
+                    item: item,
+                  })
+                }>
                 <View style={{justifyContent: 'center'}}>
                   <Image
                     source={{uri: item.image}}

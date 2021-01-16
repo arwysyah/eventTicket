@@ -9,26 +9,27 @@ import {
 } from '../styles/index';
 
 import PropTypes from 'prop-types'
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 const {cardWrapper, animatedWrapper, parentAnimated, avatarImage} = globalStyle;
 const Parallax = ({navigation,data}) => {
   const scrollX = React.useRef(new Animated.Value(0)).current;
-  // const compare=(a, b)=> {
-  //   if (a > b) return 1;
-  //   if (b > a) return -1;
+  const compare=(a, b)=> {
+    if (a.like > b.like) return 1;
+    if (b.like < a.like) return -1;
   
-  //   return 0;
-  // }
+    return 0;
+  }
   
-  // const newData = useMemo(()=>{
-  //   return(
-  //     data.sort(compare)
-  //   )
-  // },[data])
+  const newData = useMemo(()=>{
+    return(
+      data.sort(compare).slice(0,5)
+    )
+  },[])
   return (
     <View>
       <Animated.FlatList
-        data={data}
+        data={newData}
         keyExtractor={(item, index) => item.id.toString()}
         contentContainerStyle={{alignItems: 'center'}}
         horizontal
@@ -57,7 +58,7 @@ const Parallax = ({navigation,data}) => {
             outputRange: [-width * 0.7, 0, width * 0.7],
           });
           return (
-            <TouchableOpacity onPress={() => navigation.navigate('Detail',{item:item})}>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('Detail',{item:item})}>
               <View style={cardWrapper}>
                 <Text style={{fontWeight: 'bold'}}>{item.author}</Text>
                 <View style={animatedWrapper}>
@@ -85,7 +86,7 @@ const Parallax = ({navigation,data}) => {
                   resizeMode="contain"
                 />
               </View>
-            </TouchableOpacity>
+            </TouchableWithoutFeedback>
           );
         }}
       />

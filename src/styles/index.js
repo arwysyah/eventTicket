@@ -1,7 +1,7 @@
 import React from 'react';
-import {StyleSheet, Dimensions} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 const spacing = 12;
 const SIZE = width * 0.62;
 const HEIGHT = SIZE - 90;
@@ -25,7 +25,7 @@ const globalStyle = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: height / 1.8,
-    backgroundColor: '#f0f5f2',
+    // backgroundColor: '#f0f5f2',
   },
   parentAnimated: {
     width: ITEM_WIDTH,
@@ -86,10 +86,73 @@ const globalStyle = StyleSheet.create({
     width: 120,
     borderRadius: 6,
   },
+  locText: { backgroundColor: '#FFFDDA', width: width / 4, alignItems: "center", top: -19 },
   directionRows: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     paddingLeft: 30,
+  },scheduleStyle:{fontSize: 18, textAlign: 'center', left: 30},
+  smallWrapper:{
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 120,
+
+  },
+  contentPart:{
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: width/2,
+  },
+  commonButton: {
+    width: width - 250,
+    top: 20,
+    height: 40,
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    backgroundColor: '#5790f2',
+
+
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 8,
+  },
+  nextButton:{color: '#FFFFFF', fontWeight: 'bold'},
+  floatingButton: {
+    width: 200,
+    backgroundColor: 'red',
+    position: 'absolute',
+    height: 40,
+
+    bottom: 0,
+    width: width,
+
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    backgroundColor: '#5790f2',
+
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 8,
+  },
+  flexWrap: {
+    height: 70,
+    flexDirection: 'row',
+    alignItems: 'center',
+    left: -height / 6,
   },
   commonText: {
     fontSize: 10,
@@ -114,6 +177,15 @@ const globalStyle = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 8,
   },
+  showHide: { textAlign: 'center', fontSize: 17, color: '#3262a8' },
+  parentHeader: {
+    flexDirection: 'row',
+    marginTop: 20,
+    marginBottom: 20,
+    height: 36,
+    position: 'relative',
+    backgroundColor: 'white',
+  },
   cardPart: {
     backgroundColor: '#ffffff',
     opacity: 0.8,
@@ -129,7 +201,8 @@ const globalStyle = StyleSheet.create({
     width: width / 1.3,
     borderRadius: 10,
     left: 3,
-  },avatarImage: {
+  },
+  avatarImage: {
     width: 60,
     height: 60,
     // bottom,
@@ -140,9 +213,10 @@ const globalStyle = StyleSheet.create({
     borderWidth: 5,
     borderColor: '#FFFFFF',
   },
-  bigText:{
-    fontSize:24,textAlign:'center',
-    fontWeight:'bold'
+  bigText: {
+    fontSize: 24,
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
   backIconContainer: {
     position: 'absolute',
@@ -163,7 +237,7 @@ const globalStyle = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    top: -spacing + 15
+    top: -spacing + 15,
   },
 });
 
@@ -179,5 +253,5 @@ export {
   HEIGHT,
   backgroundColor,
   ITEM_WIDTH,
-  ITEM_HEIGHT
+  ITEM_HEIGHT,
 };
