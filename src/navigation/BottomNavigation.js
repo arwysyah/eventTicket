@@ -8,6 +8,7 @@ import MyTicket from '../screens/Mytickets';
 import Search from '../screens/Search';
 import {Image} from 'react-native';
 import Octicons from 'react-native-vector-icons/Octicons';
+import { height } from '../styles';
 
 const Tab = createBottomTabNavigator();
 export default function BottomNavigation() {
@@ -50,15 +51,18 @@ export default function BottomNavigation() {
       tabBarOptions={{
         activeTintColor: 'black',
         inactiveTintColor: 'grey',
-        labelStyle: {},
+        labelStyle: {
+          bottom: 3,
+        },
         style: {
           backgroundColor: 'white',
 
           opacity: 1,
-          height: 52,
+          height: 40,
           justifyContent: 'center',
           alignItems: 'center',
           marginHorizontal: 30,
+          top:height-2,
 
           // borderRadius: 18,
           position: 'absolute',
@@ -74,7 +78,7 @@ export default function BottomNavigation() {
 
           elevation: 7,
         },
-        tabStyle: {height: 40},
+        tabStyle: {height: 35},
       }}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen
@@ -91,7 +95,7 @@ export default function BottomNavigation() {
         name="Invitations"
         component={Invitations}
         options={{
-          tabBarBadge: 3,
+          tabBarBadge: 2,
           tabBarBadgeStyle: {
             top: -3,
             height: 18,
