@@ -73,7 +73,7 @@ const Home = () => {
         </View>
       </View>
       <View style={{height: height}}>
-        <View style={{top: -90, height: 80}}>
+        <View style={{top: -60, height: 80}}>
           <Text style={smallTitle}>Upcoming Events</Text>
           <SliderMenu data={eventComing} />
         </View>
