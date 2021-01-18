@@ -35,7 +35,7 @@ const BackgroundImage = () => {
             flexDirection: 'row',
             position: 'absolute',
             alignSelf: 'center',
-            marginTop: height / 3.7,
+            marginTop: height / 3.8,
             justifyContent: 'center',
            
           }}>
@@ -51,7 +51,7 @@ const BackgroundImage = () => {
             );
           })}
         </View>
- 
+ <View style={{height:50,backgroundColor:'white',top:height/4,borderRadius:20}}/>
       </ImageBackground>
     </View>
   );
