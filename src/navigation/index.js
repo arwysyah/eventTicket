@@ -1,2 +1,3 @@
 import RouteStack from './stackNavigation'
-export {RouteStack}
+import BottomNavigation from './BottomNavigation'
+export {RouteStack,BottomNavigation}

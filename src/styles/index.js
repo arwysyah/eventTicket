@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Dimensions } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
-const { height, width } = Dimensions.get('window');
+const {height, width} = Dimensions.get('window');
 const spacing = 12;
 const SIZE = width * 0.62;
 const HEIGHT = SIZE - 90;
@@ -10,16 +10,48 @@ const color = '#E0E5EC';
 const black = 'black';
 const ITEM_WIDTH = (width / 1.4) * 0.76;
 const ITEM_HEIGHT = (ITEM_WIDTH / 1.4) * 1.47;
-const backgroundColor = '#f0f5f2';
+const backgroundColor = '#FBFBFB';
+const globalColor = '#9E69D2';
 const globalStyle = StyleSheet.create({
   container: {
     backgroundColor,
     flex: 1,
   },
+  imageBackground: {width, height: height / 3.2},
   content: {
     marginLeft: 20,
     marginRight: 20,
   },
+  title: {fontSize: 23, fontWeight: 'bold', color: globalColor},
+  wrapper: {
+    alignItems: 'center',
+    height: 40,
+    justifyContent: 'center',
+    width,
+  },
+  txt:{
+    color: '#9E9E9E',
+  left:-2},
+
+  txt_2:{color: 
+    '#9E9E9E',
+},
+  rowIcon:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingRight: 20,
+  },
+  pagingWrapper: {
+    flexDirection: 'row',
+    position: 'absolute',
+    alignSelf: 'center',
+    marginTop: height / 5,
+    justifyContent: 'center',
+  },
+  rotate: {
+    transform: [{rotate: '90deg'}],
+  },
+
   cardWrapper: {
     width: width,
     justifyContent: 'center',
@@ -34,85 +66,128 @@ const globalStyle = StyleSheet.create({
     alignItems: 'center',
     // backgroundColor: '#FFFFFF',
   },
-  animatedWrapper: {
-    borderRadius: 18,
-    borderWidth: 7,
-    shadowColor: '#000',
-    shadowRadius: 30,
-    shadowOpacity: 1,
-
-    backgroundColor: '#f0f5f2',
-    borderColor: '#FFFFFF',
-  },
-  titleText: {
-    color: 'black',
-    fontSize: 17,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    top: 5,
-  },
-  dateText: {
-    color: '#fc9803',
-    fontSize: 14,
-  },
-  cardContent: {
-    height: HEIGHT * 1.8,
-    width: width / 1.2,
-    paddingLeft: 20,
-  },
-  footerCard: {
-    height: 65,
-    width: '100%',
-    paddingLeft: 10,
-    paddingRight: 10,
-    justifyContent: 'center',
-  },
-  cardContainer: {
-    backgroundColor: '#FFFFFF',
-    opacity: 0.8,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    height: HEIGHT,
-    // borderRadius: 8,
-    borderWidth: 0.3,
-    borderColor: '#cfcfcf',
-    // borderRadius: 30,
+  contentWrapper: {
+    borderRadius: 20,
+    position: 'absolute',
+    top: height * 0.31,
+    alignSelf: 'center',
+    width,
     backgroundColor: 'white',
-    // borderRadius: 10,
+    flex: 1,
+    height: 600,
+  },
+  icons: {
+    backgroundColor: '#EEE5F5',
+    height: 37,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 44,
+    borderRadius: 8,
+    left: 12,
+  },
+  textInput: {
+    width: width * 0.8,
+    borderColor: 'gray',
+    borderWidth: 0.8,
+    borderRadius: 10,
+    height: 37,
+    paddingLeft: 48,
+  },
+  smallCard: {
+    height: height / 7,
+    backgroundColor: '#FFFFFF',
+    width: width * 0.9,
+    top: -25,
+    alignSelf: 'center',
+    borderBottomEndRadius: 10,
+    borderBottomLeftRadius: 10,
+    // borderWidth:0.2,
     shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.17,
+    shadowRadius: 0.8,
+    elevation: 4,
   },
-  smallImage: {
-    height: 120,
-    width: 120,
-    borderRadius: 6,
-  },
-  locText: { backgroundColor: '#FFFDDA', width: width / 4, alignItems: "center", top: -19 },
-  directionRows: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    paddingLeft: 30,
-  },scheduleStyle:{fontSize: 18, textAlign: 'center', left: 30},
-  smallWrapper:{
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 120,
+  imageContainer: {
+    height: height / 2.5,
+    // backgroundColor: 'red',
+    width: width * 0.89,
+    alignSelf: 'center',
+    top: -30,
 
+    borderRadius: 10,
   },
-  contentPart:{
+  styleicons: {
+    height: 40,
+    width: 40,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    left: 23,
+  },
+  line: {
+    borderWidth: 0.1,
+    height: 1,
+    backgroundColor: '#F0F0F0',
+    width: width * 0.9,
+    alignSelf: 'center',
+    left: -10,
+  },
+  image: {
+    flex: 1,
+    width: width * 0.9,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginBottom: -85,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+  },
+  rowsContainer: {
+    borderRadius: 20,
+    position: 'absolute',
+    top: height * 0.31,
+    alignSelf: 'center',
+    width,
+    height: 400,
+    position: 'absolute',
+  },
+  headerSearch: {
     justifyContent: 'center',
     alignItems: 'center',
-    height: width/2,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    paddingVertical: 20,
+    paddingHorizontal: 20,
+    left: -12,
   },
-  commonButton: {
-    width: width - 250,
-    top: 20,
+  commonText: {color: 'grey', fontSize: 12, top: 45},
+  lineControl: {
+    backgroundColor: '#c9ccd1',
+    top: 145,
+    width,
+  },
+  smallTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: globalColor,
+    left: 13,
+  },
+  floatingButton: {
+    width: width * 0.9,
+    backgroundColor: globalColor,
+
     height: 40,
+    top: -40,
+
+    bottom: 0,
+
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    backgroundColor: '#5790f2',
-
 
     shadowColor: '#000',
     shadowOffset: {
@@ -123,21 +198,18 @@ const globalStyle = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 8,
   },
-  nextButton:{color: '#FFFFFF', fontWeight: 'bold'},
-  floatingButton: {
+  buttonCreate: {
     width: 200,
-    backgroundColor: 'red',
-    position: 'absolute',
+    backgroundColor: globalColor,
+
     height: 40,
 
     bottom: 0,
-    width: width,
 
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    backgroundColor: '#5790f2',
 
     shadowColor: '#000',
     shadowOffset: {
@@ -148,96 +220,25 @@ const globalStyle = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 8,
   },
-  flexWrap: {
-    height: 70,
-    flexDirection: 'row',
+  headerWrapper: {
+    top: -30,
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+  },
+  head: {
+    height: height / 3,
+    borderRadius: 20,
+    top: 20,
+  },
+  footer: {
+    height: height / 3,
     alignItems: 'center',
-    left: -height / 6,
+    top: 160,
   },
-  commonText: {
-    fontSize: 10,
-    color: 'black',
-  },
-  cardContainerPerCard: {
-    backgroundColor: '#FFFFFF',
-    opacity: 0.8,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    height: HEIGHT * 2,
-    borderRadius: 8,
-    borderRadius: 30,
-    backgroundColor: 'white',
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
-    elevation: 8,
-  },
-  showHide: { textAlign: 'center', fontSize: 17, color: '#3262a8' },
-  parentHeader: {
-    flexDirection: 'row',
-    marginTop: 20,
-    marginBottom: 20,
-    height: 36,
-    position: 'relative',
-    backgroundColor: 'white',
-  },
-  cardPart: {
-    backgroundColor: '#ffffff',
-    opacity: 0.8,
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: HEIGHT / 2,
-    borderRadius: 8,
-    // width:width/1.2,
-    padding: spacing * 2,
-  },
-  slidePicture: {
-    height: HEIGHT * 1.2,
-    width: width / 1.3,
-    borderRadius: 10,
-    left: 3,
-  },
-  avatarImage: {
-    width: 60,
-    height: 60,
-    // bottom,
-    borderRadius: 60,
-    position: 'absolute',
-    bottom: HEIGHT - 90,
-    alignItems: 'center',
-    borderWidth: 5,
-    borderColor: '#FFFFFF',
-  },
-  bigText: {
-    fontSize: 24,
+  footerText: {
     textAlign: 'center',
-    fontWeight: 'bold',
-  },
-  backIconContainer: {
-    position: 'absolute',
-
-    left: 15,
-    zIndex: 999,
-    width: 35,
-    height: 35,
-    borderRadius: 35,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-    top: -spacing + 15,
+    fontSize: 12,
+    color: 'grey',
   },
 });
 
@@ -254,4 +255,5 @@ export {
   backgroundColor,
   ITEM_WIDTH,
   ITEM_HEIGHT,
+  globalColor,
 };

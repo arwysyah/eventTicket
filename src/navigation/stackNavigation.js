@@ -1,7 +1,8 @@
 import React from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import Home from '../screens/Home'
-import Detail from '../screens/DetailScreen'
+import Detail from '../screens/Search'
+import BottomNavigation from '../navigation/BottomNavigation'
 const Stack = createStackNavigator();
 const RouteStack = () => {
   return (
@@ -16,20 +17,10 @@ const RouteStack = () => {
       mode="modal">
       <Stack.Screen
         name="Home"
-        component={Home}
+        component={BottomNavigation}
         options={{headerShown: false}}
       />
-      <Stack.Screen
-        name="Detail"
-        component={Detail}
-        options={
-          ({headerShown: false},
-          {
-            ...TransitionPresets.SlideFromRightIOS,
-            gestureDirection: 'horizontal-inverted',
-          })
-        }
-      />
+     
     </Stack.Navigator>
   );
 };
